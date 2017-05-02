@@ -33,6 +33,51 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 </head>
 <link rel="stylesheet" href="css/myCo.css">
+
+<script>
+ $(document).ready(function(){
+   $('#brochureDownload').on('click',function (e) {
+
+       $.ajax({
+           type : "POST",
+           data :{
+               "fname" : $("#fname").val(),
+               "lname" : $('#lname').val(),
+               "email" : $('#email').val()
+           },
+           url : "/brochuredata",
+           success : function(data){
+               if(data.statusCode == 402)
+               {
+                   alert("Successful");
+               }
+           }
+
+       });
+   });
+ });
+
+ $(document).ready(function(){
+     $('#paperdownload').on('click',function (e) {
+         $.ajax({
+             type : "POST",
+             data :{
+                 "fname" : $("#fname").val(),
+                 "lname" : $('#lname').val(),
+                 "email" : $('#email').val()
+             },
+             url : "/paperdata",
+             success : function(data){
+                 if(data.statusCode == 402)
+                 {
+                     alert("Successful");
+                 }
+             }
+
+         });
+     });
+ });
+</script>
 <body>
 <div id="header"></div>
 
@@ -43,7 +88,7 @@
     <div class="row">
         <div class="col-md-2">
             <div class="row">
-                <button type="button" class="btn btn-info btn-lg" style="color: cornflowerblue; height: 60px; border-radius: 10px; color: black" data-toggle="modal" data-target="#myModal2">Brochure</button>
+                <button id="brochure" type="button" class="btn btn-info btn-lg" style="color: cornflowerblue; height: 60px; border-radius: 10px; color: black" data-toggle="modal" data-target="#myModal2">Brochure</button>
 
                 <div class="modal fade" id="myModal2" role="dialog">
                     <div class="modal-dialog modal-lg">
@@ -66,12 +111,12 @@
                                         Email
                                         <input type="email" class="form-control" id="email" placeholder="Email" />
                                     </div>
-                                    <button class="btn btn-success">Download</button>
+                                    <button id="brochureDownload" type="submit" class="btn btn-success">Download</button>
                                     <button class="btn btn-default">Cancel</button>
                                 </form>
                             </div>
                             <div class="modal-footer">
-                                <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                                <button type="submit" class="btn btn-danger" data-dismiss="modal">Close</button>
                             </div>
                         </div>
                     </div>
@@ -104,7 +149,7 @@
                                         Email
                                         <input type="email" class="form-control" id="email1" placeholder="Email" />
                                     </div>
-                                    <button class="btn btn-success">Download</button>
+                                    <button id = "paperdownload" type="submit" class="btn btn-success">Download</button>
                                     <button class="btn btn-danger">Cancel</button>
                                 </form>
                             </div>
