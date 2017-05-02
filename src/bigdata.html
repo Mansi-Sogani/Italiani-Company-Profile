@@ -1,0 +1,189 @@
+<!doctype html>
+<html class="no-js" lang="">
+<head>
+    <style>
+        input[class = "form-control"]{
+            width: 300px;
+        }
+        p{
+            font-family: "Times New Roman";
+            font-weight: 800;
+        }
+    </style>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Place favicon.ico in the root directory -->
+
+    <link rel="stylesheet" href="css/main.css">
+    <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+    <script>
+        $(function(){
+            $("#header").load("header.html");
+            $("#footer").load("footer.html");
+
+        });
+    </script>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+</head>
+<link rel="stylesheet" href="css/myCo.css">
+<body>
+<div id="header"></div>
+
+<div class="panel-body">
+        <span style="text-align: center">
+        <h1>Big Data</h1>
+        </span>
+    <div class="row">
+        <div class="col-md-2">
+            <div class="row">
+                <button type="button" class="btn btn-info btn-lg" style="color: cornflowerblue; height: 60px; color: black" data-toggle="modal" data-target="#myModal2">Brochure</button>
+
+                <!-- Modal -->
+                <div class="modal fade" id="myModal2" role="dialog">
+                    <div class="modal-dialog modal-lg">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                <h4 class="modal-title">Download</h4>
+                            </div>
+                            <div class="modal-body">
+                                <form>
+                                    <div class="form-group">
+                                        First Name
+                                        <input type="text" class="form-control" id="fname" placeholder="First Name" />
+                                    </div>
+                                    <div class="form-group">
+                                        Last Name
+                                        <input type="text" class="form-control" id="lname" placeholder="Last Name" />
+                                    </div>
+                                    <div class="form-group">
+                                        Email
+                                        <input type="email" class="form-control" id="email" placeholder="Email" />
+                                    </div>
+                                    <button class="btn btn-success">Download</button>
+                                    <button class="btn btn-default">Cancel</button>
+                                </form>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row" style="height: 30px;">
+
+            </div>
+            <div class="row">
+                <button type="button" class="btn btn-info btn-lg" style="color: cornflowerblue; height: 60px; color: black" data-toggle="modal" data-target="#myModal1">White Paper</button>
+
+                <!-- Modal -->
+                <div class="modal fade" id="myModal1" role="dialog">
+                    <div class="modal-dialog modal-lg">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                <h4 class="modal-title">Download</h4>
+                            </div>
+                            <div class="modal-body">
+                                <form>
+                                    <div class="form-group">
+                                        First Name
+                                        <input type="text" class="form-control" id="fname1" placeholder="First Name" />
+                                    </div>
+                                    <div class="form-group">
+                                        Last Name
+                                        <input type="text" class="form-control" id="lname1" placeholder="Last Name" />
+                                    </div>
+                                    <div class="form-group">
+                                       Email
+                                        <input type="email" class="form-control" id="email1" placeholder="Email" />
+                                    </div>
+                                    <button class="btn btn-success">Download</button>
+                                    <button class="btn btn-danger">Cancel</button>
+                                </form>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-8">
+            <p>According to IDC's prediction in 2013, the market for
+                big data will reach $16.1 billion in 2014, growing 6
+                times faster than the overall IT market.This kind of
+                business analysis reports brings great business opportunities
+                and strong research interests among both academic and industry
+                communities.Recently, our Big Data product offerings are organized
+                focusing on Big Data Computing, Big Data Sciences and Analytics,and Big Data Technology and Engineering.</p>
+        </div>
+        <div class="col-md-2">
+            <div class="row" style="height: 200px;">
+                <div class="panel-group">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                                <a data-toggle="collapse" href="#collapse1">Customer Accolades</a>
+                            </h4>
+                        </div>
+                        <div id="collapse1" class="panel-collapse collapse" >
+                            <div class="panel-body" >
+                                <ul class="nav nav-list" style="background-color:cornflowerblue;">
+                                    <li class="bg-info"><a href="#">Great overview of an incredibly complex topic. <br>
+                                        <span class="glyphicon glyphicon-star yellow"></span>
+                                        <span class="glyphicon glyphicon-star yellow"></span><br>
+                                        - A Pendi</a></li>
+                                    <li class="bg-info"><a href="#">Not so clear about the topic. It does not include suitable examples and new ideas<br>
+                                        <span class="glyphicon glyphicon-star yellow"></span>
+                                        <br>- S Yedu</a></li>
+                                    <li class="bg-info"><a href="#">I enjoyed every single page of papers. It is a must read for marketing techniques<br>
+                                        <span class="glyphicon glyphicon-star yellow"></span>
+                                        <span class="glyphicon glyphicon-star yellow"></span><span class="glyphicon glyphicon-star yellow"></span><span class="glyphicon glyphicon-star yellow"></span><br> - John K</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-2">
+
+            </div>
+            <div class="col-md-7">
+                <div class="row">
+                    <div class="col-md-2">
+
+                    </div>
+                    <div class="col-md-8">
+                        <img src="http://distributedmarketing.org/wp-content/uploads/2012/08/big_data_holy_grail_800x600_blog.png" alt="Big Data" style="width:500px;height:300px;">
+                    </div>
+                    <div class="col-md-2">
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-2">
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="footer"></div>
+</body>
+</html>
