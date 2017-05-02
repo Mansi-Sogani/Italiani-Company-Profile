@@ -1,0 +1,129 @@
+<!doctype html>
+<html class="no-js" lang="">
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="css/main.css">
+    <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCdyfZAmAetjoMMmG6_EBpS0HltkbpdqBE&callback=myMap"></script>
+    <style>
+        input[class = "form-control"]{
+            width: 300px;
+        }
+        p{
+            font-family: "Times New Roman";
+            font-weight: 800;
+        }
+    </style>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Locations</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+    <script>
+        $(function(){
+            $("#header").load("header.html");
+            $("#footer").load("footer.html");
+
+        });
+    </script>
+    <script>
+        var myCenter=new google.maps.LatLng(37.494004,-121.925775);
+        function initialize(){
+            var mapProp = {
+                center: myCenter,
+                zoom:5,
+                mapTypeId: google.maps.MapTypeId.ROADMAP
+            };
+            var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
+
+            var marker = new google.maps.Marker({
+                position: myCenter,
+                title:'Click - zoom'
+            });
+            marker.setMap(map);
+            google.maps.event.addListener(marker,'click',function() {
+                map.setZoom(9);
+                map.setCenter(marker.getPosition());
+            });
+        }
+        google.maps.event.addDomListener(window, 'load', initialize);
+    </script>
+    <script>
+        var myCenter2=new google.maps.LatLng(18.5204, 73.8567);
+        function initialize2(){
+            var mapProp2 = {
+                center: myCenter2,
+                zoom:5,
+                mapTypeId: google.maps.MapTypeId.ROADMAP
+            };
+            var map2 = new google.maps.Map(document.getElementById("googleMap2"),mapProp2);
+
+            var marker2 = new google.maps.Marker({
+                position: myCenter2,
+                title:'Click - zoom'
+            });
+            marker2.setMap(map2);
+            google.maps.event.addListener(marker,'click',function() {
+                map.setZoom(9);
+                map.setCenter(marker2.getPosition());
+            });
+        }
+        google.maps.event.addDomListener(window, 'load', initialize2);
+    </script>
+
+
+</head>
+<link rel="stylesheet" href="css/myCo.css">
+<body>
+<div id="header"></div>
+
+<div class="container">
+    <hr>
+    <div class="row">
+        <div class="col-md-12">
+            <center><h3>Locations</h3><center>
+        </div>
+        <div class="col-md-6">
+            <p>
+            <h4>Park View Community Center - Fremont</h4>
+            </p>
+            <p>
+                38660, Lexington ST<br>
+                Fremont CA 94536<br>
+                United States
+            </p>
+            <p>
+            <div id="googleMap" style="width:500px;height:380px;"></div>
+            </p>
+        </div>
+        <div class="col-md-6">
+            <p>
+            <h4>Sinhgad College of Engineering - Pune</h4>
+            </p>
+
+            <p>44/1, Vadgaon Budruk, Off. Sinhgad Road,<br>
+            Pune, Maharashtra 411041,<br>
+                India
+
+            </p>
+            <p>
+            <div id="googleMap2" style="width:500px;height:380px;"></div>
+            </p>
+        </div>
+
+    </div>
+    <hr>
+
+</div>
+
+
+<div id="footer"></div>
+</body>
+</html>
