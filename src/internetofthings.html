@@ -44,7 +44,7 @@
                "lname" : $('#lname').val(),
                "email" : $('#email').val()
            },
-           url : "/register",
+           url : "/brochuredata",
            success : function(data){
                if(data.statusCode == 402)
                {
@@ -54,6 +54,27 @@
 
        });
    });
+ });
+
+ $(document).ready(function(){
+     $('#paperdownload').on('click',function (e) {
+         $.ajax({
+             type : "POST",
+             data :{
+                 "fname" : $("#fname").val(),
+                 "lname" : $('#lname').val(),
+                 "email" : $('#email').val()
+             },
+             url : "/paperdata",
+             success : function(data){
+                 if(data.statusCode == 402)
+                 {
+                     alert("Successful");
+                 }
+             }
+
+         });
+     });
  });
 </script>
 <body>
@@ -127,7 +148,7 @@
                                         Email
                                         <input type="email" class="form-control" id="email1" placeholder="Email" />
                                     </div>
-                                    <button type="submit" class="btn btn-success">Download</button>
+                                    <button id = "paperdownload" type="submit" class="btn btn-success">Download</button>
                                     <button class="btn btn-danger">Cancel</button>
                                 </form>
                             </div>
